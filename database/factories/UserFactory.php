@@ -21,3 +21,12 @@ $factory->define(Agendamento\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(Agendamento\Event::class, function (Faker $faker) {
+    return [
+        'title' => $faker->sentence(4),
+        'start' => $faker->dateTimeThisMonth(),
+        'end' => $faker->dateTimeThisMonth(),
+        'color' => $faker->hexColor
+    ];
+});
