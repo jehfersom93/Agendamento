@@ -5,3 +5,6 @@ Route::get('/', function () {
 });
 Route::resource('events', 'EventsController',['only' => ['index', 'store', 'update', 'destroy']]);
 Route::get('events', 'EventController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
