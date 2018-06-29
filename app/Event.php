@@ -6,18 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    /**
-    *[$table description]
-    *@var string
-    */
+
     protected $table = 'events';
 
-    /**
-     *[$fillable description]
-     *@var string
-     */
-    protected  $fillable = [
-        'title', 'start', 'end', 'color'
-    ];
+    protected $fillable = ['title','start_date','end_date'];
+
     public $timestamps = false;
 }

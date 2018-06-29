@@ -1,7 +1,10 @@
 <?php
-namespace app\http\controllers;
+
+namespace Agendamento\Http\Controllers;
+
 use \Illuminate\Http\Request;
-use app\Event;
+use Agendamento\Event;
+use Calendar;
 
 class EventsController extends Controller
 {
@@ -19,7 +22,7 @@ class EventsController extends Controller
                     null,
                     // Add color and link on event
                     [
-                        'color' => '#ff0000',
+                        'color' => '#f05050',
                         'url' => 'pass here url and any route',
                     ]
                 );
@@ -27,7 +30,6 @@ class EventsController extends Controller
         }
         $calendar = Calendar::addEvents($events);
         return view('fullcalender', compact('calendar'));
-    }
     }
 
     public function create()
